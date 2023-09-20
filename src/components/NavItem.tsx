@@ -3,18 +3,20 @@ import Link from "next/link";
 
 const NavItem = ({ mobile }: { mobile?: boolean }) => {
   return (
-    <ul>
+    <ul
+      className={`text-md justify-center flex gap-4 w-full items-center ${mobile}`}
+    >
       <li className="py-2 text-center border-b-4 cursor-pointer">
         <Link href="/admin">Admin</Link>
       </li>
       <li className="py-2 text-center border-b-4 cursor-pointer">
-        <Link href="/admin">User</Link>
+        <Link href="/user">User</Link>
       </li>
       <li className="py-2 text-center border-b-4 cursor-pointer">
-        <button>market</button>
+        <button>Signout</button>
       </li>
       <li className="py-2 text-center border-b-4 cursor-pointer">
-        <button>Sign in</button>
+        <button>Signin</button>
       </li>
     </ul>
   );
